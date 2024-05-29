@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+}
+
+#shopping__cart {
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+}

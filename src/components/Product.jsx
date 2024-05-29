@@ -3,14 +3,9 @@ import PropTypes from "prop-types";
 const Product = ({ product }) => {
   return (
     <>
-      <img
-        src={product.image}
-        alt="product-img"
-        width={"100px"}
-        height={"100px"}
-      />
-      <figcaption>{product.title}</figcaption>
-      <p>$ {product.price}</p>
+      <img src={product.image} alt="product-img" />
+        <h2>{product.title}</h2>
+        <p>$ {product.price}</p>
     </>
   );
 };

@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import './styles/App.css';
+
 import useProducts from "./hooks/useProducts";
 
 import ProductList from "./components/ProductList";

@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import Product from "./Product";
 
+import '../styles/ProductList.css'
+
 const ProductList = ({ products, searchInput }) => {
 
   const filteredSearchInput = searchInput.toLowerCase();
@@ -14,9 +16,9 @@ const ProductList = ({ products, searchInput }) => {
   return (
     <section>
       {filteredProducts.map((product) => (
-        <figure key={product.id}>
+        <div key={product.id} className="product__card">
           <Product product={product} />
-        </figure>
+        </div>
       ))}
     </section>
   );

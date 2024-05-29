@@ -1,0 +1,8 @@
+input[type=search] {
+    border-color: blue;
+    padding: 0.6rem;
+    margin: 0.5rem;
+    border-radius: 15px;
+    width: 35%;
+    font-size: 1rem;
+}
