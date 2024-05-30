@@ -1,0 +1,12 @@
+.home__svg {
+  display: none;
+  width: 35px;
+  height: 35px;
+  fill: #F2F2F2;
+}
+
+@media only screen and (max-width: 768px) {
+  .home__svg {
+    display: block;
+  }
+}

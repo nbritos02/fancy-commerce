@@ -1,12 +1,16 @@
+import { Route, Routes } from "react-router-dom";
+
 import { useState } from "react";
 
 import "./styles/App.css";
 
 import useProducts from "./hooks/useProducts";
 
-import ProductList from "./components/ProductList";
-import NavBar from "./components/NavBar";
 import Loader from "./components/Loader";
+import NavBar from "./components/NavBar";
+import ProductList from "./components/ProductList";
+import ProductDetail from "./components/ProductDetail";
+import NotFound from "./components/NotFound";
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
@@ -20,7 +24,11 @@ function App() {
       {loading ? (
         <Loader />
       ) : null}
-      <ProductList products={products} searchInput={searchInput} />
+      <Routes>
+        <Route path="/" element={<ProductList products={products} searchInput={searchInput}/>} />
+        <Route path="/product/:id" element={<ProductDetail/>} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
   );
 }
