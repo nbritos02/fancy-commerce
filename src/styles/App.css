@@ -1,3 +1,19 @@
+:root {
+  --darker: #000D08;
+  --dark: #01261C;
+  --mid: #3E5951;
+  --light: #94A6A1;
+  --lighter:#F2F2F2;
+  /* -------------------- */
+  --background:#F2F2F2;
+  --text: #000D08;
+  --card: #94A6A1;
+  /* -------------------- */
+    --background-nightmode:#01261C;
+    --text-nightmode: #F2F2F2;
+    --card-nightmode: #94a6a1b4;
+}
+
 /*! CSS RESET */
 * {
   margin: 0;
@@ -6,7 +22,11 @@
   font-family: 'Roboto', sans-serif;
   font-size: 62, 5%;
 }
+/*! --------- */
 
 #root {
   overflow: hidden;
+  background-color: var(--background);
+  color: var(--text);
+  min-height: 100vh;
 }

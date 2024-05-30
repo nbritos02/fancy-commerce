@@ -1,0 +1,15 @@
+.loader__div{
+  overflow: hidden;
+  background-color: #94a6a18a;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+
+
