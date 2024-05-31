@@ -1,0 +1,25 @@
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: var(--footer);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+footer p {
+    color: var(--lighter);
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--lighter);
+}
+
+.copy {
+    margin: 0.5rem;
+    font-size: 0.8rem;
+}
+

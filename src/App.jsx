@@ -10,6 +10,7 @@ import Loader from "./components/Loader";
 import NavBar from "./components/NavBar";
 import ProductList from "./components/ProductList";
 import ProductDetail from "./components/ProductDetail";
+import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetail/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </>
   );
 }

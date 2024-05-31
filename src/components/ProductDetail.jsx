@@ -29,7 +29,7 @@ const ProductDetail = () => {
   if (loading) return <Loader />
 
   return singleProduct ? (
-    <>
+    <div className="product__detail">
       <div className="product__container">
         <h2>{singleProduct.title}</h2>
         <img src={singleProduct.image} alt="product" />
@@ -41,7 +41,7 @@ const ProductDetail = () => {
         <p>{singleProduct.description}.</p>
         <p className="p__category">Category: {singleProduct.category}</p>
       </div>
-    </>
+    </div>
   ) : (
     <Loader />
   );

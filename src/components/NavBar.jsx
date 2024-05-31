@@ -8,7 +8,7 @@ import SearchBar from "./SearchBar";
 const NavBar = ({ searchInput, setSearchInput }) => {
   return (
     <nav>
-      <Header />
+      <Header setSearchInput={setSearchInput} />
       <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
     </nav>
   );
