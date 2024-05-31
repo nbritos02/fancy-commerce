@@ -4,7 +4,7 @@ import Product from "./Product";
 import "../styles/ProductList.css";
 import { useNavigate } from "react-router-dom";
 
-const ProductList = ({ products, searchInput }) => {
+const ProductList = ({ products, searchInput, setSearchInput }) => {
   const filteredSearchInput = searchInput.toLowerCase();
 
   const navigate = useNavigate();
@@ -21,7 +21,10 @@ const ProductList = ({ products, searchInput }) => {
         <div
           key={product.id}
           className="product__card"
-          onClick={() => navigate(`/product/${product.id}`)}
+          onClick={() => {
+            navigate(`/product/${product.id}`);
+            setSearchInput("");
+          }}
         >
           <Product product={product} />
         </div>
@@ -33,6 +36,7 @@ const ProductList = ({ products, searchInput }) => {
 ProductList.propTypes = {
   products: PropTypes.array,
   searchInput: PropTypes.string,
+  setSearchInput: PropTypes.func,
 };
 
 export default ProductList;

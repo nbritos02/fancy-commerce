@@ -26,7 +26,7 @@ function App() {
         <Loader />
       ) : null}
       <Routes>
-        <Route path="/" element={<ProductList products={products} searchInput={searchInput}/>} />
+        <Route path="/" element={<ProductList products={products} searchInput={searchInput} setSearchInput={setSearchInput}/>} />
         <Route path="/product/:id" element={<ProductDetail/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
