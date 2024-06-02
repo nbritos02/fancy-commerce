@@ -10,6 +10,7 @@ import Loader from "./components/Loader";
 import NavBar from "./components/NavBar";
 import ProductList from "./components/ProductList";
 import ProductDetail from "./components/ProductDetail";
+import Login from "./components/Login";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 
@@ -22,12 +23,23 @@ function App() {
   return (
     <>
       <NavBar searchInput={searchInput} setSearchInput={setSearchInput} />
-      {loading ? (
-        <Loader />
-      ) : null}
+      {loading ? <Loader /> : null}
       <Routes>
-        <Route path="/" element={<ProductList products={products} searchInput={searchInput} setSearchInput={setSearchInput}/>} />
-        <Route path="/product/:id" element={<ProductDetail/>} />
+        <Route
+          path="/"
+          element={
+            <ProductList
+              products={products}
+              searchInput={searchInput}
+              setSearchInput={setSearchInput}
+            />
+          }
+        />
+        
+        <Route path="/product/:id" element={<ProductDetail />} />
+
+        <Route path="/login" element={<Login />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

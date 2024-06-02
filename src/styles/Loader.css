@@ -1,16 +1,11 @@
-.loader__div{
+.loader__div {
   overflow: hidden;
-  background-color: #94a6a18a;
+  background-color: #94a6a1;
   position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(10px);
   z-index: 1;
-  
 }
-
-
-

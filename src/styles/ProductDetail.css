@@ -67,7 +67,6 @@
   .product__detail {
     display: flex;
     flex-direction: row;
-    height: 90vh;
   }
 
   .product__container {
