@@ -1,8 +1,14 @@
 nav {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--mid);
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--mid);
+}
+
+.cart__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }

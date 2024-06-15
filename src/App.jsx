@@ -10,7 +10,7 @@ import Loader from "./components/Loader";
 import NavBar from "./components/NavBar";
 import ProductList from "./components/ProductList";
 import ProductDetail from "./components/ProductDetail";
-import Login from "./components/Login";
+import Cart from "../src/components/Cart";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 
@@ -35,10 +35,9 @@ function App() {
             />
           }
         />
-        
-        <Route path="/product/:id" element={<ProductDetail />} />
 
-        <Route path="/login" element={<Login />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/cart" element={<Cart />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import getAllProductsService from "../services/getAllProductsService.js";
 
 const useProducts = (setLoading) => {
   const [products, setProducts] = useState([]);
@@ -6,10 +7,10 @@ const useProducts = (setLoading) => {
   useEffect(() => {
     const getAllProducts = async () => {
       try {
-        const resp = await fetch("https://fakestoreapi.com/products");
-        const json = await resp.json();
-        setProducts(json);
+        const resp = await getAllProductsService();
+        setProducts(resp);
         setLoading(false);
+        window.scrollTo(0, 0);
       } catch (error) {
         console.log(error);
       }

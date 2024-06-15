@@ -1,49 +1,42 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useContext } from "react";
 import Loader from "./Loader";
 
 import "../styles/ProductDetail.css";
 
+import useSingleProduct from "../hooks/useSingleProduct";
+import { CartContext } from "../contexts/CartContextProvider";
+import NotFound from "./NotFound";
+
 const ProductDetail = () => {
-  const [singleProduct, setSingleProduct] = useState({});
   const [loading, setLoading] = useState(true);
 
   const { id } = useParams();
-  const url = `https://fakestoreapi.com/products/${id}`;
+  const { addProd } = useContext(CartContext);
 
-  useEffect(() => {
-    const getSingleProduct = async () => {
-      try {
-        const resp = await fetch(url);
-        const json = await resp.json();
-        setSingleProduct(json);
-        setLoading(false);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+  const product = useSingleProduct({ setLoading, id });
 
-    getSingleProduct();
-  });
+  if (loading) return <Loader />;
 
-  if (loading) return <Loader />
-
-  return singleProduct ? (
+  return product ? (
     <div className="product__detail">
-      <div className="product__container">
-        <h2>{singleProduct.title}</h2>
-        <img src={singleProduct.image} alt="product" />
-        <h3>$ {singleProduct.price}</h3>
+      <div className="product__dcard">
+        <h2 className="product__title">{product.title}</h2>
+        <img src={product.image} alt="product" height={"50px"} width={"50px"} />
       </div>
       <div className="product__separator"></div>
       <div className="product__data">
+        <h3 className="product__price">$ {product.price}</h3>
         <h2>Description</h2>
-        <p>{singleProduct.description}.</p>
-        <p className="p__category">Category: {singleProduct.category}</p>
+        <p>{product.description}.</p>
+        <p className="p__category">Category: {product.category}</p>
+        <button className="add__cart" onClick={() => addProd(product)}>
+          Add to Cart
+        </button>
       </div>
     </div>
   ) : (
-    <Loader />
+    <NotFound />
   );
 };
 
