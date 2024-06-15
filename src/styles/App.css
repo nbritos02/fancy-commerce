@@ -22,8 +22,21 @@
 /*! --------- */
 
 #root {
-  overflow: hidden;
   background-color: var(--background);
   color: var(--text);
+  height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.app__container {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }

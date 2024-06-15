@@ -21,28 +21,30 @@ function App() {
   const products = useProducts(setLoading);
 
   return (
-    <>
+    <div className="app__container">
       <NavBar searchInput={searchInput} setSearchInput={setSearchInput} />
       {loading ? <Loader /> : null}
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <ProductList
-              products={products}
-              searchInput={searchInput}
-              setSearchInput={setSearchInput}
-            />
-          }
-        />
+      <div className="main__wrapper">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <ProductList
+                products={products}
+                searchInput={searchInput}
+                setSearchInput={setSearchInput}
+              />
+            }
+          />
 
-        <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="/cart" element={<Cart />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/cart" element={<Cart />} />
 
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
