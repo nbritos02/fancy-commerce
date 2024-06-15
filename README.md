@@ -1,8 +1,34 @@
-# React + Vite
+# Fancy Commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Description
+This project is a fake e-commerce application designed to demonstrate my skills in React development. It features a responsive and attractive design, a shopping cart that stores items in local storage, and a real-time search bar.
 
-Currently, two official plugins are available:
+### Table of Contents
+1. [Description](#description)
+2. [Features](#features)
+3. [Technologies](#technologies)
+4. [License](#license)
+5. [Contact](#contact)
+6. [Demo](#demo)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Shopping Cart:** Stores items in local storage for persistence.
+- **Real-time Search:** Filters products as you type.
+- **Endpoints:**
+  - `GET /products` - Fetches all products.
+  - `GET /products/:id` - Fetches a single product based on the ID in the search params.
+
+### Technologies
+- **Frontend:** React
+- **Build Tool:** Vite
+
+###  License
+This project is licensed under the MIT License.
+
+###  Contact
+-  Name: Nicolás Britos
+-  LinkedIn: www.linkedin.com/in/nbritos02
+  
+###  Demo
+-  Check out the live demo of the project here https://fancycommerce.netlify.app
