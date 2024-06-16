@@ -7,9 +7,8 @@ This project is a fake e-commerce application designed to demonstrate my skills 
 1. [Description](#description)
 2. [Features](#features)
 3. [Technologies](#technologies)
-4. [License](#license)
-5. [Contact](#contact)
-6. [Demo](#demo)
+4. [Contact](#contact)
+5. [Demo](#demo)
 
 ### Features
 - **Responsive Design:** Optimized for both desktop and mobile devices.
@@ -22,9 +21,6 @@ This project is a fake e-commerce application designed to demonstrate my skills 
 ### Technologies
 - **Frontend:** React
 - **Build Tool:** Vite
-
-###  License
-This project is licensed under the MIT License.
 
 ###  Contact
 -  Name: Nicolás Britos
